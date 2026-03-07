@@ -1,16 +1,16 @@
 (function showWelcomeMessage() {
-  // One-time popup output to satisfy assignment's JS interaction requirement.
+  // show popup once per tab
   if (sessionStorage.getItem('vw-welcome-seen')) {
     return;
   }
 
-  alert('Welcome to Volcano Watch. Use Dashboard to inspect categories and details.');
-  const visitorName = prompt('Optional: enter your name for a personalized greeting.');
+  alert('Welcome to Volcano Watch.');
+  const visitorName = prompt('Your name (optional):');
   if (visitorName && visitorName.trim()) {
-    alert(`Hello, ${visitorName.trim()}! Check the Dashboard to explore volcano categories.`);
+    alert(`Hi ${visitorName.trim()}! Open Dashboard to start.`);
   }
 
-  const wantsSafetyTips = confirm('Would you like to check volcano safety tips now?');
+  const wantsSafetyTips = confirm('Open Safety Tips page now?');
 
   if (wantsSafetyTips && window.location.pathname !== '/safety') {
     window.location.href = '/safety';

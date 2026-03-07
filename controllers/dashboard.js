@@ -6,7 +6,7 @@ import activityStore from '../models/activity-store.js';
 
 const dashboard = {
   createView(request, response) {
-    // Show category titles only. Item details are intentionally hidden on this page.
+    // only show category titles here
     const categories = activityStore.getAllCategories();
     const info = appStore.getAppInfo();
     logger.info('Dashboard page loading');

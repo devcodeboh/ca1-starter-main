@@ -5,7 +5,7 @@ import appStore from '../models/app-store.js';
 
 const safety = {
   createView(request, response) {
-    // Extra view for assignment extension: concise volcano safety checklist.
+    // extra page with short safety checklist
     const info = appStore.getAppInfo();
     logger.info('Safety tips page loading');
 
