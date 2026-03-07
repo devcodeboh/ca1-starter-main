@@ -96,6 +96,13 @@ body {
   box-shadow: 0 12px 20px rgba(19, 49, 74, 0.12);
 }
 
+.ui.cards > .card > .image img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border);
+}
+
 .details-list p {
   margin-bottom: 0.35rem;
 }

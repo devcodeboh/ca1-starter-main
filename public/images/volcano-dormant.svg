@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="t d">
+  <title id="t">Dormant volcano</title><desc id="d">Stylized dormant mountain volcano.</desc>
+  <rect width="800" height="480" fill="#dbeafe"/>
+  <polygon points="170,430 400,160 630,430" fill="#4b5563"/>
+  <polygon points="320,430 400,260 480,430" fill="#6b7280"/>
+  <ellipse cx="220" cy="110" rx="95" ry="38" fill="#ffffff" opacity="0.8"/>
+  <ellipse cx="610" cy="135" rx="120" ry="44" fill="#ffffff" opacity="0.75"/>
+  <rect y="425" width="800" height="55" fill="#2f855a"/>
+</svg>

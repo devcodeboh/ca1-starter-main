@@ -7,6 +7,8 @@
         {
           "id": "v-101",
           "name": "Etna",
+          "image": "/images/volcano-active.svg",
+          "imageAlt": "Etna volcano landscape",
           "country": "Italy",
           "lastEruption": "2025-11",
           "riskLevel": "High",
@@ -16,6 +18,8 @@
         {
           "id": "v-102",
           "name": "Kilauea",
+          "image": "/images/volcano-active.svg",
+          "imageAlt": "Kilauea volcano landscape",
           "country": "United States",
           "lastEruption": "2024-09",
           "riskLevel": "High",
@@ -25,6 +29,8 @@
         {
           "id": "v-103",
           "name": "Sakurajima",
+          "image": "/images/volcano-active.svg",
+          "imageAlt": "Sakurajima volcano landscape",
           "country": "Japan",
           "lastEruption": "2025-02",
           "riskLevel": "High",
@@ -40,6 +46,8 @@
         {
           "id": "v-201",
           "name": "Mount Kenya",
+          "image": "/images/volcano-dormant.svg",
+          "imageAlt": "Mount Kenya volcano landscape",
           "country": "Kenya",
           "lastEruption": "Unknown",
           "riskLevel": "Low",
@@ -49,6 +57,8 @@
         {
           "id": "v-202",
           "name": "Mount Elgon",
+          "image": "/images/volcano-dormant.svg",
+          "imageAlt": "Mount Elgon volcano landscape",
           "country": "Kenya/Uganda",
           "lastEruption": "More than 1 million years ago",
           "riskLevel": "Low",
@@ -58,6 +68,8 @@
         {
           "id": "v-203",
           "name": "Kohala",
+          "image": "/images/volcano-dormant.svg",
+          "imageAlt": "Kohala volcano landscape",
           "country": "United States",
           "lastEruption": "More than 60,000 years ago",
           "riskLevel": "Low",
@@ -73,6 +85,8 @@
         {
           "id": "v-301",
           "name": "Vesuvius",
+          "image": "/images/volcano-historic.svg",
+          "imageAlt": "Vesuvius volcano landscape",
           "country": "Italy",
           "lastEruption": "1944-03",
           "riskLevel": "Medium",
@@ -82,6 +96,8 @@
         {
           "id": "v-302",
           "name": "Krakatoa",
+          "image": "/images/volcano-historic.svg",
+          "imageAlt": "Krakatoa volcano landscape",
           "country": "Indonesia",
           "lastEruption": "2018-12",
           "riskLevel": "Medium",
@@ -91,6 +107,8 @@
         {
           "id": "v-303",
           "name": "Mount St. Helens",
+          "image": "/images/volcano-historic.svg",
+          "imageAlt": "Mount St. Helens volcano landscape",
           "country": "United States",
           "lastEruption": "2008-01",
           "riskLevel": "Medium",
