@@ -8,6 +8,7 @@
       <p><strong>Role:</strong> {{author.role}}</p>
       <p><strong>Email:</strong> {{author.email}}</p>
       <p><strong>Phone:</strong> {{author.phone}}</p>
+      <p><strong>Location:</strong> {{author.location}}</p>
       <div class="student-note">
         CA1 project page. Data on this page is loaded from JSON files.
       </div>
@@ -53,6 +54,16 @@
           </div>
         {{/each}}
       </div>
+    </div>
+
+    <div class="ui segment">
+      <h3 class="ui header">{{map.title}}</h3>
+      <iframe
+        class="map-embed"
+        src="{{map.embedUrl}}"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Google Map for Ballybricken 36"></iframe>
     </div>
   </div>
 </section>

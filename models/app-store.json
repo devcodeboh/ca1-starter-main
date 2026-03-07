@@ -9,7 +9,12 @@
       "name": "Bohdan Husiev",
       "role": "Software Development Student (2 year)",
       "email": "20111321@setu.ie",
-      "phone": "+353 852493579"
+      "phone": "+353 852493579",
+      "location": "Ballybricken 36"
+    },
+    "map": {
+      "title": "Location (Google Maps)",
+      "embedUrl": "https://www.google.com/maps?q=Ballybricken%2036&output=embed"
     },
     "statistics": [
       {

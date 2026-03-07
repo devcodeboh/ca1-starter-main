@@ -11,6 +11,7 @@ const about = {
     const author = appStore.getAuthorInfo();
     const staticStats = appStore.getStaticStats();
     const projectNotes = appStore.getProjectNotes();
+    const map = appStore.getMapInfo();
     const collectionStats = activityStore.getStats();
 
     logger.info('About page loading');
@@ -21,6 +22,7 @@ const about = {
       author,
       staticStats,
       projectNotes,
+      map,
       collectionStats,
     });
   },

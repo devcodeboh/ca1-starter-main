@@ -21,6 +21,10 @@ const appStore = {
   getProjectNotes() {
     return this.getAppInfo().projectNotes;
   },
+
+  getMapInfo() {
+    return this.getAppInfo().map;
+  },
 };
 
 export default appStore;

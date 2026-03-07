@@ -146,6 +146,13 @@ body {
   color: #1f445d;
 }
 
+.map-embed {
+  width: 100%;
+  min-height: 300px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+
 .ui.ordered.list .item,
 .ui.list .item {
   line-height: 1.45;
