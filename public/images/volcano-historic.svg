@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-labelledby="t d">
-  <title id="t">Historic eruption volcano</title><desc id="d">Stylized volcano with ash plume.</desc>
-  <rect width="800" height="480" fill="#fde68a"/>
-  <ellipse cx="400" cy="115" rx="160" ry="58" fill="#9ca3af" opacity="0.9"/>
-  <ellipse cx="390" cy="85" rx="120" ry="44" fill="#6b7280" opacity="0.85"/>
-  <polygon points="170,430 400,150 630,430" fill="#5b4a3b"/>
-  <path d="M400 150 C430 210,430 250,405 300" stroke="#ef4444" stroke-width="10" fill="none" stroke-linecap="round"/>
-  <rect y="425" width="800" height="55" fill="#365314"/>
-</svg>

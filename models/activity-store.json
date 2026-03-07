@@ -7,7 +7,7 @@
         {
           "id": "v-101",
           "name": "Etna",
-          "image": "/images/volcano-active.svg",
+          "image": "/images/volcanoes/etna.jpg",
           "imageAlt": "Etna volcano landscape",
           "country": "Italy",
           "lastEruption": "2025-11",
@@ -18,7 +18,7 @@
         {
           "id": "v-102",
           "name": "Kilauea",
-          "image": "/images/volcano-active.svg",
+          "image": "/images/volcanoes/kilauea.jpg",
           "imageAlt": "Kilauea volcano landscape",
           "country": "United States",
           "lastEruption": "2024-09",
@@ -29,7 +29,7 @@
         {
           "id": "v-103",
           "name": "Sakurajima",
-          "image": "/images/volcano-active.svg",
+          "image": "/images/volcanoes/sakurajima.jpg",
           "imageAlt": "Sakurajima volcano landscape",
           "country": "Japan",
           "lastEruption": "2025-02",
@@ -46,7 +46,7 @@
         {
           "id": "v-201",
           "name": "Mount Kenya",
-          "image": "/images/volcano-dormant.svg",
+          "image": "/images/volcanoes/mount-kenya.jpg",
           "imageAlt": "Mount Kenya volcano landscape",
           "country": "Kenya",
           "lastEruption": "Unknown",
@@ -57,7 +57,7 @@
         {
           "id": "v-202",
           "name": "Mount Elgon",
-          "image": "/images/volcano-dormant.svg",
+          "image": "/images/volcanoes/mount-elgon.jpg",
           "imageAlt": "Mount Elgon volcano landscape",
           "country": "Kenya/Uganda",
           "lastEruption": "More than 1 million years ago",
@@ -68,7 +68,7 @@
         {
           "id": "v-203",
           "name": "Kohala",
-          "image": "/images/volcano-dormant.svg",
+          "image": "/images/volcanoes/kohala.jpg",
           "imageAlt": "Kohala volcano landscape",
           "country": "United States",
           "lastEruption": "More than 60,000 years ago",
@@ -85,7 +85,7 @@
         {
           "id": "v-301",
           "name": "Vesuvius",
-          "image": "/images/volcano-historic.svg",
+          "image": "/images/volcanoes/vesuvius.jpg",
           "imageAlt": "Vesuvius volcano landscape",
           "country": "Italy",
           "lastEruption": "1944-03",
@@ -96,7 +96,7 @@
         {
           "id": "v-302",
           "name": "Krakatoa",
-          "image": "/images/volcano-historic.svg",
+          "image": "/images/volcanoes/krakatoa.jpg",
           "imageAlt": "Krakatoa volcano landscape",
           "country": "Indonesia",
           "lastEruption": "2018-12",
@@ -107,7 +107,7 @@
         {
           "id": "v-303",
           "name": "Mount St. Helens",
-          "image": "/images/volcano-historic.svg",
+          "image": "/images/volcanoes/mount-st-helens.jpg",
           "imageAlt": "Mount St. Helens volcano landscape",
           "country": "United States",
           "lastEruption": "2008-01",
