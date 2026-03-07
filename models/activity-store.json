@@ -1,0 +1,103 @@
+{
+  "activityCollection": [
+    {
+      "id": "cat-01",
+      "title": "Active Volcanoes",
+      "activities": [
+        {
+          "id": "v-101",
+          "name": "Etna",
+          "country": "Italy",
+          "lastEruption": "2025-11",
+          "riskLevel": "High",
+          "heightM": 3357,
+          "monitoringStatus": "Continuous"
+        },
+        {
+          "id": "v-102",
+          "name": "Kilauea",
+          "country": "United States",
+          "lastEruption": "2024-09",
+          "riskLevel": "High",
+          "heightM": 1247,
+          "monitoringStatus": "Continuous"
+        },
+        {
+          "id": "v-103",
+          "name": "Sakurajima",
+          "country": "Japan",
+          "lastEruption": "2025-02",
+          "riskLevel": "High",
+          "heightM": 1117,
+          "monitoringStatus": "Continuous"
+        }
+      ]
+    },
+    {
+      "id": "cat-02",
+      "title": "Dormant Volcanoes",
+      "activities": [
+        {
+          "id": "v-201",
+          "name": "Mount Kenya",
+          "country": "Kenya",
+          "lastEruption": "Unknown",
+          "riskLevel": "Low",
+          "heightM": 5199,
+          "monitoringStatus": "Periodic"
+        },
+        {
+          "id": "v-202",
+          "name": "Mount Elgon",
+          "country": "Kenya/Uganda",
+          "lastEruption": "More than 1 million years ago",
+          "riskLevel": "Low",
+          "heightM": 4321,
+          "monitoringStatus": "Periodic"
+        },
+        {
+          "id": "v-203",
+          "name": "Kohala",
+          "country": "United States",
+          "lastEruption": "More than 60,000 years ago",
+          "riskLevel": "Low",
+          "heightM": 1670,
+          "monitoringStatus": "Low-frequency"
+        }
+      ]
+    },
+    {
+      "id": "cat-03",
+      "title": "Historic Eruptions",
+      "activities": [
+        {
+          "id": "v-301",
+          "name": "Vesuvius",
+          "country": "Italy",
+          "lastEruption": "1944-03",
+          "riskLevel": "Medium",
+          "heightM": 1281,
+          "monitoringStatus": "Continuous"
+        },
+        {
+          "id": "v-302",
+          "name": "Krakatoa",
+          "country": "Indonesia",
+          "lastEruption": "2018-12",
+          "riskLevel": "Medium",
+          "heightM": 813,
+          "monitoringStatus": "Continuous"
+        },
+        {
+          "id": "v-303",
+          "name": "Mount St. Helens",
+          "country": "United States",
+          "lastEruption": "2008-01",
+          "riskLevel": "Medium",
+          "heightM": 2549,
+          "monitoringStatus": "Continuous"
+        }
+      ]
+    }
+  ]
+}
