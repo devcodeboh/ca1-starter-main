@@ -1,12 +1,12 @@
 :root {
-  --bg: #f7f3ec;
-  --surface: #fffdf8;
-  --ink: #1f252f;
-  --accent: #c2410c;
-  --accent-deep: #7c2d12;
-  --muted: #5c6673;
-  --border: #e8dece;
-  --highlight: #fee7cc;
+  --bg: #f2f5f7;
+  --surface: #ffffff;
+  --ink: #1d2430;
+  --accent: #1f6f8b;
+  --accent-deep: #14506f;
+  --muted: #5b6878;
+  --border: #dfe7ee;
+  --highlight: #d8eef8;
 }
 
 html {
@@ -25,9 +25,9 @@ body {
   font-family: 'Avenir Next', 'Segoe UI', sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 8% 12%, #ffd9bf 0%, transparent 28%),
-    radial-gradient(circle at 92% 8%, #ffd5b0 0%, transparent 24%),
-    linear-gradient(180deg, #fff7ed 0%, #f7f3ec 100%),
+    radial-gradient(circle at 12% 8%, #e4f2ff 0%, transparent 24%),
+    radial-gradient(circle at 90% 0%, #d8eef8 0%, transparent 20%),
+    linear-gradient(180deg, #f9fcff 0%, #f2f5f7 100%),
     var(--bg);
 }
 
@@ -40,7 +40,7 @@ body {
   border: 1px solid var(--border);
   border-radius: 14px;
   background: var(--surface);
-  box-shadow: 0 8px 20px rgba(60, 35, 10, 0.08);
+  box-shadow: 0 8px 20px rgba(15, 48, 73, 0.08);
 }
 
 .app-menu .item.active,
@@ -54,7 +54,7 @@ body {
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--surface);
-  box-shadow: 0 10px 24px rgba(55, 28, 9, 0.09);
+  box-shadow: 0 10px 24px rgba(20, 52, 77, 0.08);
 }
 
 .page-hero {
@@ -68,7 +68,7 @@ body {
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   background: var(--highlight);
-  border: 1px solid #f6d2a7;
+  border: 1px solid #bfe1f3;
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -87,7 +87,13 @@ body {
 .ui.cards > .card {
   border-radius: 14px;
   border: 1px solid var(--border);
-  box-shadow: 0 8px 18px rgba(44, 28, 12, 0.08);
+  box-shadow: 0 8px 18px rgba(19, 49, 74, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ui.cards > .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(19, 49, 74, 0.12);
 }
 
 .details-list p {
@@ -110,9 +116,9 @@ body {
   margin-top: 0.75rem;
   padding: 0.8rem;
   border-radius: 10px;
-  background: #fff4e6;
+  background: #eef8ff;
   border-left: 4px solid var(--accent);
-  color: #5b3a22;
+  color: #1e3f58;
 }
 
 .ui.ordered.list .item,
