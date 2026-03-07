@@ -1,14 +1,24 @@
 'use strict';
 
 import express from 'express';
-import logger from "./utils/logger.js";
+import logger from './utils/logger.js';
+import welcome from './controllers/welcome.js';
+import dashboard from './controllers/dashboard.js';
+import details from './controllers/details.js';
+import about from './controllers/about.js';
+import safety from './controllers/safety.js';
 
 const router = express.Router();
 
-// add your own routes below
+router.get('/', welcome.createView);
+router.get('/dashboard', dashboard.createView);
+router.get('/dashboard/:id', details.createView);
+router.get('/about', about.createView);
+router.get('/safety', safety.createView);
 
-import start from './controllers/start.js';
-router.get('/', start.createView);
-
+router.use((request, response) => {
+  logger.warn(`404 on route: ${request.originalUrl}`);
+  response.status(404).send('Page not found');
+});
 
 export default router;
