@@ -1,11 +1,12 @@
 :root {
-  --bg: #f3efe6;
-  --surface: #fffaf1;
-  --ink: #2a2b2a;
-  --accent: #d9480f;
-  --accent-deep: #8f2d08;
-  --muted: #6b6b6b;
-  --border: #e4d9c7;
+  --bg: #f7f3ec;
+  --surface: #fffdf8;
+  --ink: #1f252f;
+  --accent: #c2410c;
+  --accent-deep: #7c2d12;
+  --muted: #5c6673;
+  --border: #e8dece;
+  --highlight: #fee7cc;
 }
 
 html {
@@ -21,23 +22,25 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Trebuchet MS', 'Gill Sans', sans-serif;
+  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 10% 20%, #ffe7cf 0%, transparent 35%),
-    radial-gradient(circle at 85% 0%, #ffd7b4 0%, transparent 30%),
+    radial-gradient(circle at 8% 12%, #ffd9bf 0%, transparent 28%),
+    radial-gradient(circle at 92% 8%, #ffd5b0 0%, transparent 24%),
+    linear-gradient(180deg, #fff7ed 0%, #f7f3ec 100%),
     var(--bg);
 }
 
 .ui.container {
-  padding-top: 1.2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 2.2rem;
 }
 
 .app-menu.ui.menu {
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   background: var(--surface);
+  box-shadow: 0 8px 20px rgba(60, 35, 10, 0.08);
 }
 
 .app-menu .item.active,
@@ -48,10 +51,28 @@ body {
 
 .page-hero.ui.segment,
 .ui.segment {
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--surface);
-  box-shadow: 0 8px 20px rgba(55, 28, 9, 0.08);
+  box-shadow: 0 10px 24px rgba(55, 28, 9, 0.09);
+}
+
+.page-hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-badge {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: var(--highlight);
+  border: 1px solid #f6d2a7;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .text-muted {
@@ -64,9 +85,9 @@ body {
 }
 
 .ui.cards > .card {
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid var(--border);
-  box-shadow: 0 6px 15px rgba(44, 28, 12, 0.08);
+  box-shadow: 0 8px 18px rgba(44, 28, 12, 0.08);
 }
 
 .details-list p {
@@ -83,6 +104,15 @@ body {
 .ui.orange.button:hover {
   background: var(--accent-deep);
   color: #fff;
+}
+
+.student-note {
+  margin-top: 0.75rem;
+  padding: 0.8rem;
+  border-radius: 10px;
+  background: #fff4e6;
+  border-left: 4px solid var(--accent);
+  color: #5b3a22;
 }
 
 .ui.ordered.list .item,

@@ -1,15 +1,15 @@
 {
   "info": {
     "appName": "Volcano Watch",
-    "tagline": "A compact guide to volcano categories and eruption context.",
-    "welcomeText": "Volcano Watch helps students and curious readers explore volcanoes by category, review key facts, and compare risk signals quickly.",
+    "tagline": "CA1 student project: volcano categories, risk context, and quick facts.",
+    "welcomeText": "I built Volcano Watch as my CA1 web project to organize volcano data into clear categories and make each item easy to inspect in a details view.",
     "heroImage": "/images/volcano-hero.svg",
     "heroImageAlt": "Volcanic eruption landscape",
     "author": {
-      "name": "Aisling Byrne",
-      "role": "Field Data Coordinator",
-      "email": "aisling.by@volcanowatch.example",
-      "phone": "+353 1 555 0142",
+      "name": "Bohdan Husiev",
+      "role": "Software Development Student (2 year)",
+      "email": "bohdan.husiev@student.example",
+      "phone": "+353 87 000 0000",
       "location": "Dublin, Ireland"
     },
     "mapImage": "/images/dublin-map.svg",
@@ -17,18 +17,18 @@
     "statistics": [
       {
         "id": "s1",
-        "label": "Project Version",
-        "value": "1.0"
+        "label": "Module",
+        "value": "CA1 Web Development"
       },
       {
         "id": "s2",
-        "label": "Data Curator",
-        "value": "Volcano Watch Team"
+        "label": "Student",
+        "value": "Bohdan Husiev"
       },
       {
         "id": "s3",
-        "label": "Focus",
-        "value": "Educational volcano overview"
+        "label": "Goal",
+        "value": "Practice MVC + JSON collections"
       }
     ]
   }
