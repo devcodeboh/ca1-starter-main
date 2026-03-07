@@ -1,9 +1,35 @@
 {
   "info": {
-    "message": 
-      "The app-store.json and app-store.js files can be expanded to store some facts about the app e.g. the app's creators. You should also add your own store (equivalent to our playlist-store.json). See the assignment spec for more details.",
-    "creators": [
-      
+    "appName": "Volcano Watch",
+    "tagline": "A compact guide to volcano categories and eruption context.",
+    "welcomeText": "Volcano Watch helps students and curious readers explore volcanoes by category, review key facts, and compare risk signals quickly.",
+    "heroImage": "https://images.unsplash.com/photo-1527489377706-5bf97e608852?auto=format&fit=crop&w=1200&q=80",
+    "heroImageAlt": "Volcanic eruption landscape",
+    "author": {
+      "name": "Aisling Byrne",
+      "role": "Field Data Coordinator",
+      "email": "aisling.by@volcanowatch.example",
+      "phone": "+353 1 555 0142",
+      "location": "Dublin, Ireland"
+    },
+    "mapImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Ireland_location_map.svg/1024px-Ireland_location_map.svg.png",
+    "mapImageAlt": "Map showing Ireland",
+    "statistics": [
+      {
+        "id": "s1",
+        "label": "Project Version",
+        "value": "1.0"
+      },
+      {
+        "id": "s2",
+        "label": "Data Curator",
+        "value": "Volcano Watch Team"
+      },
+      {
+        "id": "s3",
+        "label": "Focus",
+        "value": "Educational volcano overview"
+      }
     ]
   }
 }
