@@ -3,8 +3,8 @@
     "appName": "Volcano Watch",
     "tagline": "CA1 student project: volcano categories, risk context, and quick facts.",
     "welcomeText": "I built Volcano Watch as my CA1 web project to organize volcano data into clear categories and make each item easy to inspect in a details view.",
-    "heroImage": "/images/volcano-hero.svg",
-    "heroImageAlt": "Volcanic eruption landscape",
+    "heroImage": "/images/volcanoes/etna.jpg",
+    "heroImageAlt": "Mount Etna volcano photo",
     "author": {
       "name": "Bohdan Husiev",
       "role": "Software Development Student (2 year)",

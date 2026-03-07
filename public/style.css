@@ -123,6 +123,10 @@ body,
   flex: 1;
 }
 
+.ui.three.stackable.cards {
+  margin-bottom: 1.5rem;
+}
+
 .details-list p {
   margin-bottom: 0.35rem;
 }
