@@ -14,16 +14,12 @@ const appStore = {
     return this.getAppInfo().author;
   },
 
-  getMapInfo() {
-    const info = this.getAppInfo();
-    return {
-      image: info.mapImage,
-      alt: info.mapImageAlt,
-    };
-  },
-
   getStaticStats() {
     return this.getAppInfo().statistics;
+  },
+
+  getProjectNotes() {
+    return this.getAppInfo().projectNotes;
   },
 };
 

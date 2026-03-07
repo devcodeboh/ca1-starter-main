@@ -9,8 +9,8 @@ const about = {
     // combine static app info with live counts from collection
     const info = appStore.getAppInfo();
     const author = appStore.getAuthorInfo();
-    const map = appStore.getMapInfo();
     const staticStats = appStore.getStaticStats();
+    const projectNotes = appStore.getProjectNotes();
     const collectionStats = activityStore.getStats();
 
     logger.info('About page loading');
@@ -19,8 +19,8 @@ const about = {
       title: `${info.appName} | About`,
       id: 'about',
       author,
-      map,
       staticStats,
+      projectNotes,
       collectionStats,
     });
   },

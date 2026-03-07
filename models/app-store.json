@@ -9,11 +9,8 @@
       "name": "Bohdan Husiev",
       "role": "Software Development Student (2 year)",
       "email": "20111321@setu.ie",
-      "phone": "+353 852493579",
-      "location": "Waterford, Ireland"
+      "phone": "+353 852493579"
     },
-    "mapImage": "/images/dublin-map.svg",
-    "mapImageAlt": "Map showing Ireland",
     "statistics": [
       {
         "id": "s1",
@@ -29,6 +26,23 @@
         "id": "s3",
         "label": "Goal",
         "value": "Practice MVC + JSON collections"
+      }
+    ],
+    "projectNotes": [
+      {
+        "id": "n1",
+        "title": "MVC Structure",
+        "text": "Routes call controllers, and controllers pass data to Handlebars views."
+      },
+      {
+        "id": "n2",
+        "title": "JSON Data",
+        "text": "The app reads category and item data from JSON stores instead of hardcoded page content."
+      },
+      {
+        "id": "n3",
+        "title": "UI Features",
+        "text": "Dashboard has quick icon links and details cards include volcano images."
       }
     ]
   }

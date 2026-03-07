@@ -1,14 +1,13 @@
 {{> menu}}
 
 <section class="ui stackable grid">
-  <div class="eight wide column">
+  <div class="sixteen wide column">
     <div class="ui segment">
       <h2 class="ui header">Contact</h2>
       <p><strong>Name:</strong> {{author.name}}</p>
       <p><strong>Role:</strong> {{author.role}}</p>
       <p><strong>Email:</strong> {{author.email}}</p>
       <p><strong>Phone:</strong> {{author.phone}}</p>
-      <p><strong>Location:</strong> {{author.location}}</p>
       <div class="student-note">
         CA1 project page. Data on this page is loaded from JSON files.
       </div>
@@ -40,12 +39,20 @@
         {{/each}}
       </div>
     </div>
-  </div>
 
-  <div class="eight wide column">
     <div class="ui segment">
-      <h2 class="ui header">Where We Are</h2>
-      <img class="ui rounded bordered image" src="{{map.image}}" alt="{{map.alt}}">
+      <h3 class="ui header">Project Notes</h3>
+      <div class="ui relaxed divided list">
+        {{#each projectNotes}}
+          <div class="item">
+            <i class="bookmark icon"></i>
+            <div class="content">
+              <div class="header">{{title}}</div>
+              <div class="description">{{text}}</div>
+            </div>
+          </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </section>
