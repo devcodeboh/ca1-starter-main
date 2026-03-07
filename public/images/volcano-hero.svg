@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Volcano illustration</title>
+  <desc id="desc">Stylized volcano with lava and smoke.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#2f3e66"/>
+      <stop offset="100%" stop-color="#f48c06"/>
+    </linearGradient>
+    <linearGradient id="lava" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#d00000"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <ellipse cx="200" cy="120" rx="90" ry="45" fill="#ffffff" opacity="0.35"/>
+  <ellipse cx="960" cy="170" rx="120" ry="52" fill="#ffffff" opacity="0.28"/>
+  <polygon points="300,640 600,200 900,640" fill="#3c2f2f"/>
+  <polygon points="520,360 600,245 680,360" fill="#4f3b31"/>
+  <path d="M565 245 C575 190,625 190,635 245" fill="none" stroke="#2b2d42" stroke-width="22" stroke-linecap="round"/>
+  <path d="M600 245 C620 300,640 340,655 390" fill="none" stroke="url(#lava)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M600 245 C580 300,560 340,545 390" fill="none" stroke="url(#lava)" stroke-width="18" stroke-linecap="round"/>
+  <path d="M0 640 Q200 590 420 635 T840 620 T1200 635 L1200 700 L0 700 Z" fill="#1b4332"/>
+</svg>

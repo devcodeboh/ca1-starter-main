@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Map marker illustration</title>
+  <desc id="desc">Stylized map panel highlighting Dublin, Ireland.</desc>
+  <rect width="900" height="620" fill="#e9f5db"/>
+  <g fill="none" stroke="#95d5b2" stroke-width="3">
+    <path d="M40 90 H860"/>
+    <path d="M40 180 H860"/>
+    <path d="M40 270 H860"/>
+    <path d="M40 360 H860"/>
+    <path d="M40 450 H860"/>
+    <path d="M140 40 V580"/>
+    <path d="M280 40 V580"/>
+    <path d="M420 40 V580"/>
+    <path d="M560 40 V580"/>
+    <path d="M700 40 V580"/>
+  </g>
+  <path d="M355 110 C300 150,300 240,345 295 C360 315,380 345,385 375 C390 345,410 315,425 295 C470 240,470 150,415 110 C398 98,372 98,355 110 Z" fill="#40916c"/>
+  <circle cx="385" cy="200" r="42" fill="#d8f3dc"/>
+  <circle cx="385" cy="200" r="20" fill="#2d6a4f"/>
+  <text x="460" y="210" font-size="44" font-family="Trebuchet MS, sans-serif" fill="#1b4332">Dublin</text>
+  <text x="460" y="255" font-size="28" font-family="Trebuchet MS, sans-serif" fill="#2d6a4f">Ireland Operations Hub</text>
+</svg>
