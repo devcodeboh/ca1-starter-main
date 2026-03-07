@@ -1,0 +1,48 @@
+{{> menu}}
+
+<section class="ui stackable grid">
+  <div class="eight wide column">
+    <div class="ui segment">
+      <h2 class="ui header">Contact</h2>
+      <p><strong>Name:</strong> {{author.name}}</p>
+      <p><strong>Role:</strong> {{author.role}}</p>
+      <p><strong>Email:</strong> {{author.email}}</p>
+      <p><strong>Phone:</strong> {{author.phone}}</p>
+      <p><strong>Location:</strong> {{author.location}}</p>
+    </div>
+
+    <div class="ui segment">
+      <h3 class="ui header">App Statistics</h3>
+      <div class="ui small statistics">
+        <div class="statistic">
+          <div class="value">{{collectionStats.categories}}</div>
+          <div class="label">Categories</div>
+        </div>
+        <div class="statistic">
+          <div class="value">{{collectionStats.activities}}</div>
+          <div class="label">Items</div>
+        </div>
+        <div class="statistic">
+          <div class="value">{{collectionStats.monitoredContinuously}}</div>
+          <div class="label">Continuous Monitoring</div>
+        </div>
+      </div>
+
+      <div class="ui list">
+        {{#each staticStats}}
+          <div class="item">
+            <i class="info circle icon"></i>
+            <div class="content"><strong>{{label}}:</strong> {{value}}</div>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+
+  <div class="eight wide column">
+    <div class="ui segment">
+      <h2 class="ui header">Where We Are</h2>
+      <img class="ui rounded bordered image" src="{{map.image}}" alt="{{map.alt}}">
+    </div>
+  </div>
+</section>

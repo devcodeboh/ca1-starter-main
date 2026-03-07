@@ -1,0 +1,24 @@
+{{> menu}}
+
+<section class="ui segment">
+  <h2 class="ui header">{{appName}} Dashboard</h2>
+  <p>Category overview. Select a category to view item details.</p>
+
+  <div class="ui divided relaxed items">
+    {{#each categories}}
+      <div class="item category-row">
+        <div class="content">
+          <div class="header">{{title}}</div>
+          <div class="description">
+            <p>Category ID: {{id}}</p>
+          </div>
+        </div>
+        <div class="extra">
+          <a class="ui icon button" href="/dashboard/{{id}}" title="View items in {{title}}">
+            <i class="eye icon"></i>
+          </a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

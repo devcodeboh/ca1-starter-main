@@ -1,0 +1,33 @@
+{{> menu}}
+
+{{#if category}}
+<section class="ui segment">
+  <h2 class="ui header">{{category.title}}</h2>
+  <p>Detailed item properties for this category.</p>
+
+  <div class="ui three stackable cards">
+    {{#each category.activities}}
+      <div class="card">
+        <div class="content">
+          <div class="header">{{name}}</div>
+          <div class="meta">{{country}}</div>
+          <div class="description details-list">
+            <p><strong>Last Eruption:</strong> {{lastEruption}}</p>
+            <p><strong>Risk Level:</strong> {{riskLevel}}</p>
+            <p><strong>Height (m):</strong> {{heightM}}</p>
+            <p><strong>Monitoring:</strong> {{monitoringStatus}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <a class="ui basic button" href="/dashboard">Back to Dashboard</a>
+</section>
+{{else}}
+<section class="ui negative segment">
+  <h3 class="ui header">Category not found</h3>
+  <p>The requested category does not exist.</p>
+  <a class="ui button" href="/dashboard">Return to Dashboard</a>
+</section>
+{{/if}}

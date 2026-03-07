@@ -1,0 +1,37 @@
+{{> menu}}
+
+<section class="ui very padded segment page-hero">
+  <div class="ui stackable grid middle aligned">
+    <div class="eight wide column">
+      <h1 class="ui header">{{info.appName}}</h1>
+      <h3 class="ui header sub text-muted">{{info.tagline}}</h3>
+      <p>{{info.welcomeText}}</p>
+      <a class="ui orange button" href="/dashboard">Explore Categories</a>
+    </div>
+    <div class="eight wide column">
+      <img class="ui large bordered rounded image" src="{{info.heroImage}}" alt="{{info.heroImageAlt}}">
+    </div>
+  </div>
+</section>
+
+<section class="ui two column stackable grid">
+  <div class="column">
+    <div class="ui segment">
+      <h3 class="ui header">Why this app?</h3>
+      <p>
+        Volcano Watch is built as an educational collection app. It groups volcano data into categories, then lets
+        users inspect item-level properties in a clean details view.
+      </p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="ui segment">
+      <h3 class="ui header">What you can do</h3>
+      <ul class="ui list">
+        <li>Review volcano categories in one dashboard.</li>
+        <li>Open a category to inspect full item properties.</li>
+        <li>Read app statistics and contact details on About.</li>
+      </ul>
+    </div>
+  </div>
+</section>
