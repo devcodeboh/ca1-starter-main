@@ -22,13 +22,24 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Avenir Next', 'Segoe UI', sans-serif;
+  font-family: 'Verdana', 'Tahoma', sans-serif;
   color: var(--ink);
   background:
     radial-gradient(circle at 12% 8%, #e4f2ff 0%, transparent 24%),
     radial-gradient(circle at 90% 0%, #d8eef8 0%, transparent 20%),
     linear-gradient(180deg, #f9fcff 0%, #f2f5f7 100%),
     var(--bg);
+}
+
+body,
+.ui.header,
+.ui.button,
+.ui.input input,
+.ui.menu .item,
+.ui.list .item,
+.ui.statistic > .value,
+.ui.statistic > .label {
+  font-family: 'Verdana', 'Tahoma', sans-serif !important;
 }
 
 .ui.container {
