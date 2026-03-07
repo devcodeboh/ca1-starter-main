@@ -56,4 +56,4 @@ Open: `http://localhost:3000`
 - Controllers include inline comments to explain handler logic.
 - Dashboard links to details page using an icon action.
 - Custom CSS theme and layout are applied in `public/style.css`.
-- Basic JavaScript output interaction (alert/confirm) is in `public/script.js`.
+- Basic JavaScript output interaction (`alert`/`confirm`/`prompt`) is in `public/script.js`.
