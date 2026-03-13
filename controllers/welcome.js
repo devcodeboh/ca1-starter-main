@@ -5,7 +5,7 @@ import appStore from '../models/app-store.js';
 
 const welcome = {
   createView(request, response) {
-    // get text + hero data for home page
+
     const info = appStore.getAppInfo();
     logger.info('Welcome page loading');
 

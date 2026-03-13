@@ -6,7 +6,7 @@ import appStore from '../models/app-store.js';
 
 const details = {
   createView(request, response) {
-    // find selected category and show all item fields
+
     const category = activityStore.getCategoryById(request.params.id);
     const info = appStore.getAppInfo();
 

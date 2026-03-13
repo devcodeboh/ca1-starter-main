@@ -1,5 +1,5 @@
 (function showWelcomeMessage() {
-  // show popup once per tab
+
   if (sessionStorage.getItem('vw-welcome-seen')) {
     return;
   }

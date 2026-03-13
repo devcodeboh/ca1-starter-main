@@ -5,7 +5,7 @@ import appStore from '../models/app-store.js';
 
 const safety = {
   createView(request, response) {
-    // extra page with short safety checklist
+
     const info = appStore.getAppInfo();
     logger.info('Safety tips page loading');
 

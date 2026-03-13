@@ -6,7 +6,7 @@ import activityStore from '../models/activity-store.js';
 
 const about = {
   createView(request, response) {
-    // combine static app info with live counts from collection
+
     const info = appStore.getAppInfo();
     const author = appStore.getAuthorInfo();
     const staticStats = appStore.getStaticStats();
