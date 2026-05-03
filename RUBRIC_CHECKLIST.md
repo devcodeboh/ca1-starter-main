@@ -1,44 +1,50 @@
-# CA1 Rubric Checklist (Volcano Watch)
+# Assignment 2 Rubric Checklist (Volcano Watch)
 
 ## Baseline (40-55%)
 
-- [x] 4 core views implemented: Welcome, Dashboard, Collection Details, About
-- [x] Content loaded from JSON stores
-- [x] Welcome/About include meaningful text
+- [x] Create collection and detail/item records
+- [x] Signup/login pages implemented
+- [x] Simple totals displayed on Welcome/About
+- [x] Images available for collections and items
+- [x] Simple feature: display logged-in username and avatar
 
 ## Good (55-70%)
 
-- [x] Welcome and About include images
-- [x] Dashboard links to details page
-- [x] Controllers contain comments for readability
+- [x] Delete collection and detail/item records
+- [x] Login checks the email and password
+- [x] Avg/min/max statistics displayed
+- [x] Collection image upload
+- [x] Two simple features: delete confirmation and responsive form styling
 
 ## Excellent (70-85%)
 
-- [x] 4+ views implemented (extra `Safety` view added)
-- [x] Complete category/item content rendered from JSON stores
-- [x] Dashboard uses icon link to details page
-- [x] App uses custom color and layout style in CSS
-- [x] Controller logic is commented and separated by concern
+- [x] Update item workflow
+- [x] Sort functionality
+- [x] Password validation rules
+- [x] Statistics for the current user
+- [x] Detail/item image upload
+- [x] Complex feature: each user only sees their own collections
 
-## Outstanding (>85%)
+## Outstanding (85%+)
 
-- [x] 4+ views with complete data rendering from JSON
-- [x] Icon-based navigation from Dashboard to Details
-- [x] Distinct visual style with custom layout
-- [x] JavaScript output interaction added (`alert` + `confirm` in `public/script.js`)
+- [x] Search functionality for collections and items
+- [x] User statistics including user with most collections
+- [x] Profile image upload and profile page
+- [x] Extra feature: custom Handlebars `formatDate` helper
+- [x] Extra feature: profile page
 
 ## Manual QA Checklist
 
-- [x] `GET /` returns `200`
-- [x] `GET /dashboard` returns `200`
-- [x] `GET /dashboard/cat-01` returns `200`
-- [x] `GET /about` returns `200`
-- [x] Menu navigation works across all pages
-- [x] Details page shows all item properties
-- [x] About page shows contact, map image, and app stats
+- [x] `GET /` shows app purpose and live stats
+- [x] `GET /signup` allows a new user with profile image
+- [x] `GET /login` authenticates a demo user
+- [x] `/dashboard` is protected when logged out
+- [x] Dashboard can add/delete/search/sort collections
+- [x] Details can add/update/delete/search/sort items
+- [x] About shows global and user statistics
+- [x] Profile can update profile image
 
-## Stretch Ideas (Optional)
+## Demo Account
 
-- [ ] Add filtering by risk level on Dashboard
-- [ ] Add search by volcano name
-- [ ] Add charts for eruption recency
+- Email: `bohdan@example.com`
+- Password: `Password1!`

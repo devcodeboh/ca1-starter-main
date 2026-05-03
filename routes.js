@@ -27,11 +27,11 @@ router.post('/profile/image', requireUser, upload.single('profileImage'), accoun
 router.get('/dashboard', requireUser, dashboard.createView);
 router.post('/dashboard/add', requireUser, upload.single('image'), dashboard.addCategory);
 router.post('/dashboard/:id/delete', requireUser, dashboard.deleteCategory);
-router.get('/dashboard/:id', requireUser, details.createView);
 router.post('/dashboard/:id/addactivity', requireUser, upload.single('image'), details.addActivity);
 router.post('/dashboard/:id/deleteactivity/:activityId', requireUser, details.deleteActivity);
 router.get('/dashboard/:id/editactivity/:activityId', requireUser, details.showEditActivity);
 router.post('/dashboard/:id/updateactivity/:activityId', requireUser, upload.single('image'), details.updateActivity);
+router.get('/dashboard/:id', requireUser, details.createView);
 router.get('/about', about.createView);
 router.get('/safety', safety.createView);
 

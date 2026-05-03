@@ -5,42 +5,44 @@ import appStore from '../models/app-store.js';
 import userStore from '../models/user-store.js';
 import { uploadedPath } from '../utils/upload.js';
 
-function viewData(request, extra = {}) {
-  const info = appStore.getAppInfo();
-  return {
-    title: `${info.appName} | Account`,
-    appName: info.appName,
-    id: extra.id || 'account',
-    user: request.user,
-    ...extra,
-  };
-}
-
 const accounts = {
   showSignup(request, response) {
-    response.render('signup', viewData(request, { id: 'signup' }));
+    const info = appStore.getAppInfo();
+
+    response.render('signup', {
+      title: `${info.appName} | Signup`,
+      id: 'signup',
+      user: request.user,
+    });
   },
 
   async signup(request, response) {
+    const info = appStore.getAppInfo();
     const { firstName, lastName, email, password } = request.body;
     const passwordErrors = userStore.validatePassword(password);
 
+    // Simple checks for the signup form.
     if (!firstName || !lastName || !email || passwordErrors.length > 0) {
-      response.status(400).render('signup', viewData(request, {
+      response.status(400).render('signup', {
+        title: `${info.appName} | Signup`,
         id: 'signup',
-        error: 'Please complete all fields and follow the password rules.',
+        user: request.user,
+        error: 'Please fill in all fields and check the password rules.',
         passwordErrors,
         form: request.body,
-      }));
+      });
       return;
     }
 
+    // Do not allow two accounts with the same email.
     if (userStore.getUserByEmail(email)) {
-      response.status(400).render('signup', viewData(request, {
+      response.status(400).render('signup', {
+        title: `${info.appName} | Signup`,
         id: 'signup',
+        user: request.user,
         error: 'An account already exists for this email address.',
         form: request.body,
-      }));
+      });
       return;
     }
 
@@ -58,18 +60,27 @@ const accounts = {
   },
 
   showLogin(request, response) {
-    response.render('login', viewData(request, { id: 'login' }));
+    const info = appStore.getAppInfo();
+
+    response.render('login', {
+      title: `${info.appName} | Login`,
+      id: 'login',
+      user: request.user,
+    });
   },
 
   login(request, response) {
+    const info = appStore.getAppInfo();
     const user = userStore.authenticate(request.body.email || '', request.body.password || '');
 
     if (!user) {
-      response.status(401).render('login', viewData(request, {
+      response.status(401).render('login', {
+        title: `${info.appName} | Login`,
         id: 'login',
+        user: request.user,
         error: 'Email and password do not match.',
         form: request.body,
-      }));
+      });
       return;
     }
 
@@ -83,7 +94,13 @@ const accounts = {
   },
 
   showProfile(request, response) {
-    response.render('profile', viewData(request, { id: 'profile' }));
+    const info = appStore.getAppInfo();
+
+    response.render('profile', {
+      title: `${info.appName} | Profile`,
+      id: 'profile',
+      user: request.user,
+    });
   },
 
   async updateProfileImage(request, response) {
