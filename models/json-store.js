@@ -1,11 +1,11 @@
 'use strict';
 
-import { Low } from "lowdb";
-import { JSONFile } from "lowdb/node";
+import { LowSync } from "lowdb";
+import { JSONFileSync } from "lowdb/node";
 
 class JsonStore {
   constructor(file, defaults) {
-    this.db = new Low(new JSONFile(file), defaults);
+    this.db = new LowSync(new JSONFileSync(file), defaults);
     this.db.read();
   }
 
@@ -69,4 +69,3 @@ class JsonStore {
 }
 
 export default JsonStore;
-
