@@ -4,6 +4,34 @@
   <h2 class="ui header">{{appName}} Dashboard</h2>
   <p>Category overview for {{user.firstName}}. Select a category to view item details.</p>
 
+  <form class="ui form filter-form" action="/dashboard" method="GET">
+    <div class="four fields">
+      <div class="field">
+        <label>Search Collections</label>
+        <input type="text" name="search" value="{{search}}" placeholder="Collection title">
+      </div>
+      <div class="field">
+        <label>Sort By</label>
+        <select name="sortBy">
+          <option value="{{sortBy}}" selected>{{sortBy}}</option>
+          <option value="title">title</option>
+          <option value="items">items</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Direction</label>
+        <select name="direction">
+          <option value="{{direction}}" selected>{{direction}}</option>
+          <option value="asc">asc</option>
+          <option value="desc">desc</option>
+        </select>
+      </div>
+      <div class="field action-field">
+        <button class="ui button" type="submit">Apply</button>
+      </div>
+    </div>
+  </form>
+
   <form class="ui form add-form" action="/dashboard/add" method="POST" enctype="multipart/form-data">
     <div class="three fields">
       <div class="field">
