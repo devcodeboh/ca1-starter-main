@@ -29,7 +29,32 @@
           <div class="value">{{collectionStats.monitoredContinuously}}</div>
           <div class="label">Continuous Monitoring</div>
         </div>
+        <div class="statistic">
+          <div class="value">{{userCount}}</div>
+          <div class="label">Users</div>
+        </div>
+        <div class="statistic">
+          <div class="value">{{collectionStats.averageItemsPerCategory}}</div>
+          <div class="label">Avg Items</div>
+        </div>
+        <div class="statistic">
+          <div class="value">{{collectionStats.maxHeight}}</div>
+          <div class="label">Max Height</div>
+        </div>
       </div>
+
+      <div class="ui message">
+        Top collector: <strong>{{topCollector.name}}</strong> with {{topCollector.collections}} collections.
+      </div>
+
+      {{#if currentUserStats}}
+        <h4 class="ui header">Your Statistics</h4>
+        <div class="ui list">
+          <div class="item"><strong>Your collections:</strong> {{currentUserStats.categories}}</div>
+          <div class="item"><strong>Your volcanoes:</strong> {{currentUserStats.activities}}</div>
+          <div class="item"><strong>Your average height:</strong> {{currentUserStats.averageHeight}} m</div>
+        </div>
+      {{/if}}
 
       <div class="ui list">
         {{#each staticStats}}

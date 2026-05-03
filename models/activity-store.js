@@ -111,17 +111,35 @@ const activityStore = {
     return activity;
   },
 
-  getStats() {
-    const categories = this.getAllCategories();
+  getStats(userId = null) {
+    const categories = userId ? this.getCategoriesByUserId(userId) : this.getAllCategories();
+    const activities = categories.flatMap((category) => category.activities);
     const totalActivities = categories.reduce((sum, category) => sum + category.activities.length, 0);
+    const heights = activities.map((activity) => Number(activity.heightM)).filter((height) => height > 0);
+    const averageHeight = heights.length
+      ? Math.round(heights.reduce((sum, height) => sum + height, 0) / heights.length)
+      : 0;
 
     return {
       categories: categories.length,
       activities: totalActivities,
+      averageItemsPerCategory: categories.length ? (totalActivities / categories.length).toFixed(1) : '0.0',
+      averageHeight,
+      minHeight: heights.length ? Math.min(...heights) : 0,
+      maxHeight: heights.length ? Math.max(...heights) : 0,
       monitoredContinuously: categories
         .flatMap((category) => category.activities)
         .filter((item) => item.monitoringStatus === 'Continuous').length,
     };
+  },
+
+  getUserWithMostCollections(users) {
+    const ranked = users.map((user) => ({
+      name: `${user.firstName} ${user.lastName}`,
+      collections: this.getCategoriesByUserId(user.id).length,
+    })).sort((a, b) => b.collections - a.collections);
+
+    return ranked[0] || { name: 'None yet', collections: 0 };
   },
 };
 
