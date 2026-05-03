@@ -7,7 +7,7 @@ import appStore from '../models/app-store.js';
 const details = {
   createView(request, response) {
 
-    const category = activityStore.getCategoryById(request.params.id);
+    const category = activityStore.getCategoryByUser(request.params.id, request.user.id);
     const info = appStore.getAppInfo();
 
     if (!category) {
@@ -24,6 +24,7 @@ const details = {
     response.render('details', {
       title: `${info.appName} | ${category.title}`,
       id: 'dashboard',
+      user: request.user,
       category,
     });
   },

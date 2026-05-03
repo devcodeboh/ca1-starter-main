@@ -10,8 +10,19 @@ const activityStore = {
     return this.store.findAll(this.collection);
   },
 
+  getCategoriesByUserId(userId) {
+    return this.store.findBy(this.collection, (category) => category.userId === userId);
+  },
+
   getCategoryById(id) {
     return this.store.findOneBy(this.collection, (category) => category.id === id);
+  },
+
+  getCategoryByUser(id, userId) {
+    return this.store.findOneBy(
+      this.collection,
+      (category) => category.id === id && category.userId === userId
+    );
   },
 
   getStats() {

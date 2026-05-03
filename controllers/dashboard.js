@@ -7,7 +7,7 @@ import activityStore from '../models/activity-store.js';
 const dashboard = {
   createView(request, response) {
 
-    const categories = activityStore.getAllCategories();
+    const categories = activityStore.getCategoriesByUserId(request.user.id);
     const info = appStore.getAppInfo();
     logger.info('Dashboard page loading');
 
@@ -15,6 +15,7 @@ const dashboard = {
       title: `${info.appName} | Dashboard`,
       id: 'dashboard',
       appName: info.appName,
+      user: request.user,
       categories,
     });
   },

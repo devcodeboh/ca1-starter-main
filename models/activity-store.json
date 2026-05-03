@@ -2,7 +2,10 @@
   "activityCollection": [
     {
       "id": "cat-01",
+      "userId": "user-001",
       "title": "Active Volcanoes",
+      "image": "/images/volcanoes/etna.jpg",
+      "imageAlt": "Active Volcanoes collection image",
       "activities": [
         {
           "id": "v-101",
@@ -41,7 +44,10 @@
     },
     {
       "id": "cat-02",
+      "userId": "user-001",
       "title": "Dormant Volcanoes",
+      "image": "/images/volcanoes/mount-kenya.jpg",
+      "imageAlt": "Dormant Volcanoes collection image",
       "activities": [
         {
           "id": "v-201",
@@ -80,7 +86,10 @@
     },
     {
       "id": "cat-03",
+      "userId": "user-001",
       "title": "Historic Eruptions",
+      "image": "/images/volcanoes/vesuvius.jpg",
+      "imageAlt": "Historic Eruptions collection image",
       "activities": [
         {
           "id": "v-301",
