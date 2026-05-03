@@ -1,0 +1,48 @@
+{{> menu}}
+
+<section class="ui segment">
+  <h2 class="ui header">Edit {{activity.name}}</h2>
+  <p>Update the selected volcano in {{category.title}}.</p>
+
+  <form class="ui form" action="/dashboard/{{category.id}}/updateactivity/{{activity.id}}" method="POST" enctype="multipart/form-data">
+    <div class="three fields">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" value="{{activity.name}}" required>
+      </div>
+      <div class="field">
+        <label>Country</label>
+        <input type="text" name="country" value="{{activity.country}}" required>
+      </div>
+      <div class="field">
+        <label>Last Eruption</label>
+        <input type="text" name="lastEruption" value="{{activity.lastEruption}}" required>
+      </div>
+    </div>
+    <div class="four fields">
+      <div class="field">
+        <label>Risk Level</label>
+        <select name="riskLevel" required>
+          <option value="{{activity.riskLevel}}" selected>{{activity.riskLevel}}</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Height (m)</label>
+        <input type="number" name="heightM" min="0" value="{{activity.heightM}}" required>
+      </div>
+      <div class="field">
+        <label>Monitoring</label>
+        <input type="text" name="monitoringStatus" value="{{activity.monitoringStatus}}" required>
+      </div>
+      <div class="field">
+        <label>Replace Image</label>
+        <input type="file" name="image" accept="image/*">
+      </div>
+    </div>
+    <button class="ui button" type="submit">Save Changes</button>
+    <a class="ui basic button" href="/dashboard/{{category.id}}">Cancel</a>
+  </form>
+</section>

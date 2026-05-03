@@ -45,6 +45,39 @@ const details = {
     logger.info(`Activity deleted: ${request.params.activityId}`);
     response.redirect(`/dashboard/${request.params.id}`);
   },
+
+  showEditActivity(request, response) {
+    const info = appStore.getAppInfo();
+    const category = activityStore.getCategoryByUser(request.params.id, request.user.id);
+    const activity = activityStore.getActivityByUser(
+      request.params.id,
+      request.user.id,
+      request.params.activityId
+    );
+
+    if (!category || !activity) {
+      response.redirect('/dashboard');
+      return;
+    }
+
+    response.render('edit-activity', {
+      title: `${info.appName} | Edit ${activity.name}`,
+      id: 'dashboard',
+      user: request.user,
+      category,
+      activity,
+    });
+  },
+
+  async updateActivity(request, response) {
+    await activityStore.updateActivity(request.params.id, request.user.id, request.params.activityId, {
+      ...request.body,
+      image: uploadedPath(request.file),
+    });
+
+    logger.info(`Activity updated: ${request.params.activityId}`);
+    response.redirect(`/dashboard/${request.params.id}`);
+  },
 };
 
 export default details;

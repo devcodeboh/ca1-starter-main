@@ -81,6 +81,36 @@ const activityStore = {
     }
   },
 
+  getActivityByUser(categoryId, userId, activityId) {
+    const category = this.getCategoryByUser(categoryId, userId);
+    return category ? category.activities.find((activity) => activity.id === activityId) : null;
+  },
+
+  async updateActivity(categoryId, userId, activityId, activityData) {
+    const category = this.getCategoryByUser(categoryId, userId);
+    const current = this.getActivityByUser(categoryId, userId, activityId);
+
+    if (!category || !current) {
+      return null;
+    }
+
+    const activity = {
+      ...current,
+      name: activityData.name.trim(),
+      image: activityData.image || current.image,
+      imageAlt: `${activityData.name.trim()} volcano image`,
+      country: activityData.country.trim(),
+      lastEruption: activityData.lastEruption.trim(),
+      riskLevel: activityData.riskLevel,
+      heightM: Number(activityData.heightM) || 0,
+      monitoringStatus: activityData.monitoringStatus.trim(),
+      updatedAt: new Date().toISOString(),
+    };
+
+    await this.store.editItem(this.collection, categoryId, activityId, 'activities', activity);
+    return activity;
+  },
+
   getStats() {
     const categories = this.getAllCategories();
     const totalActivities = categories.reduce((sum, category) => sum + category.activities.length, 0);

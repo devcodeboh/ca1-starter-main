@@ -63,6 +63,9 @@
           </div>
         </div>
         <div class="extra content">
+          <a class="ui icon button" href="/dashboard/{{../category.id}}/editactivity/{{id}}" title="Edit {{name}}">
+            <i class="edit icon"></i>
+          </a>
           <form class="inline-form" action="/dashboard/{{../category.id}}/deleteactivity/{{id}}" method="POST">
             <button class="ui icon negative button confirm-delete" type="submit" title="Delete {{name}}">
               <i class="trash icon"></i>
