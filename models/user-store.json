@@ -1,0 +1,14 @@
+{
+  "users": [
+    {
+      "id": "user-001",
+      "firstName": "Bohdan",
+      "lastName": "Husiev",
+      "email": "bohdan@example.com",
+      "passwordSalt": "volcano-demo-salt",
+      "passwordHash": "b2babc9a346e67ccee00d29088dc6e8ee9b54cc3159adc988a0700be3c83198d",
+      "profileImage": "/images/volcano-hero.svg",
+      "createdAt": "2026-05-03T10:00:00.000Z"
+    }
+  ]
+}
