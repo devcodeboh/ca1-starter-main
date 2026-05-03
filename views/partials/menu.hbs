@@ -5,9 +5,21 @@
 
   <div class="right menu">
     <a id="welcome" class="item" href="/">Welcome</a>
-    <a id="dashboard" class="item" href="/dashboard">Dashboard</a>
+    {{#if user}}
+      <a id="dashboard" class="item" href="/dashboard">Dashboard</a>
+    {{/if}}
     <a id="about" class="item" href="/about">About</a>
     <a id="safety" class="item" href="/safety">Safety</a>
+    {{#if user}}
+      <span class="item user-menu">
+        <img class="ui avatar image" src="{{user.profileImage}}" alt="{{user.firstName}} profile">
+        {{user.firstName}}
+      </span>
+      <a class="item" href="/logout">Logout</a>
+    {{else}}
+      <a id="login" class="item" href="/login">Login</a>
+      <a id="signup" class="item" href="/signup">Signup</a>
+    {{/if}}
   </div>
 </nav>
 

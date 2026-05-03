@@ -1,0 +1,47 @@
+{{> menu}}
+
+<section class="ui segment auth-panel">
+  <h2 class="ui header">Create Account</h2>
+  <p>Sign up to manage your own volcano collections.</p>
+
+  {{#if error}}
+    <div class="ui negative message">{{error}}</div>
+  {{/if}}
+
+  <form class="ui form" action="/signup" method="POST" enctype="multipart/form-data">
+    <div class="two fields">
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" name="firstName" value="{{form.firstName}}" required>
+      </div>
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" name="lastName" value="{{form.lastName}}" required>
+      </div>
+    </div>
+    <div class="field">
+      <label>Email</label>
+      <input type="email" name="email" value="{{form.email}}" required>
+    </div>
+    <div class="field">
+      <label>Password</label>
+      <input type="password" name="password" required>
+    </div>
+    <div class="field">
+      <label>Profile Image</label>
+      <input type="file" name="profileImage" accept="image/*">
+    </div>
+    {{#if passwordErrors}}
+      <div class="ui small message">
+        <div class="header">Password rules</div>
+        <ul class="list">
+          {{#each passwordErrors}}
+            <li>{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+    <button class="ui button" type="submit">Signup</button>
+    <a class="ui basic button" href="/login">Login</a>
+  </form>
+</section>
