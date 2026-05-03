@@ -23,6 +23,8 @@ router.post('/login', accounts.login);
 router.get('/logout', accounts.logout);
 
 router.get('/dashboard', requireUser, dashboard.createView);
+router.post('/dashboard/add', requireUser, upload.single('image'), dashboard.addCategory);
+router.post('/dashboard/:id/delete', requireUser, dashboard.deleteCategory);
 router.get('/dashboard/:id', requireUser, details.createView);
 router.get('/about', about.createView);
 router.get('/safety', safety.createView);

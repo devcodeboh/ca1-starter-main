@@ -2,20 +2,47 @@
 
 <section class="ui segment">
   <h2 class="ui header">{{appName}} Dashboard</h2>
-  <p>Category overview. Select a category to view item details.</p>
+  <p>Category overview for {{user.firstName}}. Select a category to view item details.</p>
+
+  <form class="ui form add-form" action="/dashboard/add" method="POST" enctype="multipart/form-data">
+    <div class="three fields">
+      <div class="field">
+        <label>New Category</label>
+        <input type="text" name="title" placeholder="e.g. Shield Volcanoes" required>
+      </div>
+      <div class="field">
+        <label>Collection Image</label>
+        <input type="file" name="image" accept="image/*">
+      </div>
+      <div class="field action-field">
+        <button class="ui button" type="submit">Add Category</button>
+      </div>
+    </div>
+  </form>
 
   <div class="ui divided relaxed items">
     {{#each categories}}
       <div class="item category-row">
+        <div class="ui tiny image">
+          <img src="{{image}}" alt="{{imageAlt}}">
+        </div>
         <div class="content">
           <div class="header">{{title}}</div>
+          <div class="meta">{{activities.length}} items</div>
         </div>
         <div class="extra">
           <a class="ui icon button" href="/dashboard/{{id}}" title="View items in {{title}}">
             <i class="eye icon"></i>
           </a>
+          <form class="inline-form" action="/dashboard/{{id}}/delete" method="POST">
+            <button class="ui icon negative button confirm-delete" type="submit" title="Delete {{title}}">
+              <i class="trash icon"></i>
+            </button>
+          </form>
         </div>
       </div>
+    {{else}}
+      <div class="ui message">No collections yet. Add your first category above.</div>
     {{/each}}
   </div>
 </section>

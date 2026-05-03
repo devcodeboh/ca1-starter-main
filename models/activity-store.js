@@ -1,5 +1,6 @@
 'use strict';
 
+import crypto from 'crypto';
 import JsonStore from './json-store.js';
 
 const activityStore = {
@@ -23,6 +24,29 @@ const activityStore = {
       this.collection,
       (category) => category.id === id && category.userId === userId
     );
+  },
+
+  async addCategory(userId, categoryData) {
+    const category = {
+      id: crypto.randomUUID(),
+      userId,
+      title: categoryData.title.trim(),
+      image: categoryData.image || '/images/volcano-hero.svg',
+      imageAlt: `${categoryData.title.trim()} collection image`,
+      activities: [],
+      createdAt: new Date().toISOString(),
+    };
+
+    await this.store.addCollection(this.collection, category);
+    return category;
+  },
+
+  async deleteCategory(id, userId) {
+    const category = this.getCategoryByUser(id, userId);
+
+    if (category) {
+      await this.store.removeCollection(this.collection, category);
+    }
   },
 
   getStats() {
