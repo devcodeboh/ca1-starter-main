@@ -26,6 +26,8 @@ router.get('/dashboard', requireUser, dashboard.createView);
 router.post('/dashboard/add', requireUser, upload.single('image'), dashboard.addCategory);
 router.post('/dashboard/:id/delete', requireUser, dashboard.deleteCategory);
 router.get('/dashboard/:id', requireUser, details.createView);
+router.post('/dashboard/:id/addactivity', requireUser, upload.single('image'), details.addActivity);
+router.post('/dashboard/:id/deleteactivity/:activityId', requireUser, details.deleteActivity);
 router.get('/about', about.createView);
 router.get('/safety', safety.createView);
 

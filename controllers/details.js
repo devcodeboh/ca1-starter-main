@@ -3,6 +3,7 @@
 import logger from '../utils/logger.js';
 import activityStore from '../models/activity-store.js';
 import appStore from '../models/app-store.js';
+import { uploadedPath } from '../utils/upload.js';
 
 const details = {
   createView(request, response) {
@@ -27,6 +28,22 @@ const details = {
       user: request.user,
       category,
     });
+  },
+
+  async addActivity(request, response) {
+    await activityStore.addActivity(request.params.id, request.user.id, {
+      ...request.body,
+      image: uploadedPath(request.file),
+    });
+
+    logger.info(`Activity added to category: ${request.params.id}`);
+    response.redirect(`/dashboard/${request.params.id}`);
+  },
+
+  async deleteActivity(request, response) {
+    await activityStore.deleteActivity(request.params.id, request.user.id, request.params.activityId);
+    logger.info(`Activity deleted: ${request.params.activityId}`);
+    response.redirect(`/dashboard/${request.params.id}`);
   },
 };
 

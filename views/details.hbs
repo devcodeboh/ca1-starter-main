@@ -5,6 +5,47 @@
   <h2 class="ui header">{{category.title}}</h2>
   <p>Detailed item properties for this category.</p>
 
+  <form class="ui form add-form" action="/dashboard/{{category.id}}/addactivity" method="POST" enctype="multipart/form-data">
+    <h3 class="ui header">Add Volcano</h3>
+    <div class="three fields">
+      <div class="field">
+        <label>Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div class="field">
+        <label>Country</label>
+        <input type="text" name="country" required>
+      </div>
+      <div class="field">
+        <label>Last Eruption</label>
+        <input type="text" name="lastEruption" placeholder="2026-01" required>
+      </div>
+    </div>
+    <div class="four fields">
+      <div class="field">
+        <label>Risk Level</label>
+        <select name="riskLevel" required>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Height (m)</label>
+        <input type="number" name="heightM" min="0" required>
+      </div>
+      <div class="field">
+        <label>Monitoring</label>
+        <input type="text" name="monitoringStatus" required>
+      </div>
+      <div class="field">
+        <label>Image</label>
+        <input type="file" name="image" accept="image/*">
+      </div>
+    </div>
+    <button class="ui button" type="submit">Add Item</button>
+  </form>
+
   <div class="ui three stackable cards">
     {{#each category.activities}}
       <div class="card">
@@ -21,7 +62,16 @@
             <p><strong>Monitoring:</strong> {{monitoringStatus}}</p>
           </div>
         </div>
+        <div class="extra content">
+          <form class="inline-form" action="/dashboard/{{../category.id}}/deleteactivity/{{id}}" method="POST">
+            <button class="ui icon negative button confirm-delete" type="submit" title="Delete {{name}}">
+              <i class="trash icon"></i>
+            </button>
+          </form>
+        </div>
       </div>
+    {{else}}
+      <div class="ui message">No volcanoes in this collection yet.</div>
     {{/each}}
   </div>
 

@@ -49,6 +49,38 @@ const activityStore = {
     }
   },
 
+  async addActivity(categoryId, userId, activityData) {
+    const category = this.getCategoryByUser(categoryId, userId);
+
+    if (!category) {
+      return null;
+    }
+
+    const activity = {
+      id: crypto.randomUUID(),
+      name: activityData.name.trim(),
+      image: activityData.image || '/images/volcano-hero.svg',
+      imageAlt: `${activityData.name.trim()} volcano image`,
+      country: activityData.country.trim(),
+      lastEruption: activityData.lastEruption.trim(),
+      riskLevel: activityData.riskLevel,
+      heightM: Number(activityData.heightM) || 0,
+      monitoringStatus: activityData.monitoringStatus.trim(),
+      createdAt: new Date().toISOString(),
+    };
+
+    await this.store.addItem(this.collection, categoryId, 'activities', activity);
+    return activity;
+  },
+
+  async deleteActivity(categoryId, userId, activityId) {
+    const category = this.getCategoryByUser(categoryId, userId);
+
+    if (category) {
+      await this.store.removeItem(this.collection, categoryId, 'activities', activityId);
+    }
+  },
+
   getStats() {
     const categories = this.getAllCategories();
     const totalActivities = categories.reduce((sum, category) => sum + category.activities.length, 0);
