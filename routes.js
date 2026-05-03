@@ -21,6 +21,8 @@ router.post('/signup', upload.single('profileImage'), accounts.signup);
 router.get('/login', accounts.showLogin);
 router.post('/login', accounts.login);
 router.get('/logout', accounts.logout);
+router.get('/profile', requireUser, accounts.showProfile);
+router.post('/profile/image', requireUser, upload.single('profileImage'), accounts.updateProfileImage);
 
 router.get('/dashboard', requireUser, dashboard.createView);
 router.post('/dashboard/add', requireUser, upload.single('image'), dashboard.addCategory);

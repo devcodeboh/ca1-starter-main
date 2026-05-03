@@ -81,6 +81,15 @@ const accounts = {
   logout(request, response) {
     request.session.destroy(() => response.redirect('/'));
   },
+
+  showProfile(request, response) {
+    response.render('profile', viewData(request, { id: 'profile' }));
+  },
+
+  async updateProfileImage(request, response) {
+    await userStore.updateProfileImage(request.user.id, uploadedPath(request.file));
+    response.redirect('/profile');
+  },
 };
 
 export default accounts;

@@ -74,6 +74,22 @@ const userStore = {
     const hash = hashPassword(password, user.passwordSalt);
     return hash === user.passwordHash ? user : null;
   },
+
+  async updateProfileImage(userId, profileImage) {
+    const user = this.getUserById(userId);
+
+    if (!user || !profileImage) {
+      return user;
+    }
+
+    await this.store.editCollection(this.collection, userId, {
+      ...user,
+      profileImage,
+      updatedAt: new Date().toISOString(),
+    });
+
+    return this.getUserById(userId);
+  },
 };
 
 export default userStore;

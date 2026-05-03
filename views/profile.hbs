@@ -1,0 +1,25 @@
+{{> menu}}
+
+<section class="ui segment">
+  <h2 class="ui header">Profile</h2>
+  <div class="ui stackable grid middle aligned">
+    <div class="four wide column">
+      <img class="ui medium rounded bordered image profile-preview" src="{{user.profileImage}}" alt="{{user.firstName}} profile">
+    </div>
+    <div class="twelve wide column">
+      <div class="ui list">
+        <div class="item"><strong>Name:</strong> {{user.firstName}} {{user.lastName}}</div>
+        <div class="item"><strong>Email:</strong> {{user.email}}</div>
+        <div class="item"><strong>Joined:</strong> {{formatDate user.createdAt}}</div>
+      </div>
+
+      <form class="ui form" action="/profile/image" method="POST" enctype="multipart/form-data">
+        <div class="field">
+          <label>Update Profile Image</label>
+          <input type="file" name="profileImage" accept="image/*" required>
+        </div>
+        <button class="ui button" type="submit">Upload Image</button>
+      </form>
+    </div>
+  </div>
+</section>
