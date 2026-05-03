@@ -5,6 +5,37 @@
   <h2 class="ui header">{{category.title}}</h2>
   <p>Detailed item properties for this category.</p>
 
+  <form class="ui form filter-form" action="/dashboard/{{category.id}}" method="GET">
+    <div class="four fields">
+      <div class="field">
+        <label>Search</label>
+        <input type="text" name="search" value="{{search}}" placeholder="Name, country, risk, monitoring">
+      </div>
+      <div class="field">
+        <label>Sort By</label>
+        <select name="sortBy">
+          <option value="{{sortBy}}" selected>{{sortBy}}</option>
+          <option value="name">name</option>
+          <option value="country">country</option>
+          <option value="riskLevel">riskLevel</option>
+          <option value="heightM">heightM</option>
+          <option value="monitoringStatus">monitoringStatus</option>
+        </select>
+      </div>
+      <div class="field">
+        <label>Direction</label>
+        <select name="direction">
+          <option value="{{direction}}" selected>{{direction}}</option>
+          <option value="asc">asc</option>
+          <option value="desc">desc</option>
+        </select>
+      </div>
+      <div class="field action-field">
+        <button class="ui button" type="submit">Apply</button>
+      </div>
+    </div>
+  </form>
+
   <form class="ui form add-form" action="/dashboard/{{category.id}}/addactivity" method="POST" enctype="multipart/form-data">
     <h3 class="ui header">Add Volcano</h3>
     <div class="three fields">
