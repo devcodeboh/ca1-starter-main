@@ -1,4 +1,7 @@
 (function showWelcomeMessage() {
+  if (window.location.pathname !== '/') {
+    return;
+  }
 
   if (sessionStorage.getItem('vw-welcome-seen')) {
     return;
@@ -18,3 +21,13 @@
 
   sessionStorage.setItem('vw-welcome-seen', 'true');
 })();
+
+document.querySelectorAll('.confirm-delete').forEach((button) => {
+  button.addEventListener('click', (event) => {
+    const confirmed = confirm('Delete this item?');
+
+    if (!confirmed) {
+      event.preventDefault();
+    }
+  });
+});

@@ -7,7 +7,7 @@
   --accent: #126782;
   --accent-dark: #0d4d61;
   --soft: #e8f4fb;
-  --radius: 14px;
+  --radius: 8px;
   --shadow: 0 8px 20px rgba(17, 54, 82, 0.08);
 }
 
@@ -92,6 +92,46 @@ body {
   justify-content: space-between;
 }
 
+.category-row .extra,
+.extra.content,
+.inline-form {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.inline-form {
+  margin: 0;
+}
+
+.add-form,
+.filter-form {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #f8fbfd;
+}
+
+.action-field {
+  display: flex;
+  align-items: flex-end;
+}
+
+.auth-panel {
+  max-width: 720px;
+  margin: 0 auto !important;
+}
+
+.demo-login {
+  margin-top: 1rem !important;
+}
+
+.profile-preview {
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
 .ui.cards > .card {
   overflow: hidden;
   display: flex;
@@ -162,5 +202,9 @@ body {
   .ui.container {
     width: calc(100% - 1.5rem) !important;
     margin: 0.75rem;
+  }
+
+  .action-field {
+    display: block;
   }
 }
