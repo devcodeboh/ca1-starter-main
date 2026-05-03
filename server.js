@@ -23,7 +23,22 @@ app.use(session({
   },
 }));
 
-const handlebars = create({extname: '.hbs'});
+const handlebars = create({
+  extname: '.hbs',
+  helpers: {
+    formatDate(value) {
+      if (!value) {
+        return 'Not recorded';
+      }
+
+      return new Date(value).toLocaleDateString('en-IE', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    },
+  },
+});
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 

@@ -91,6 +91,10 @@
             <p><strong>Risk Level:</strong> {{riskLevel}}</p>
             <p><strong>Height (m):</strong> {{heightM}}</p>
             <p><strong>Monitoring:</strong> {{monitoringStatus}}</p>
+            <p><strong>Added:</strong> {{formatDate createdAt}}</p>
+            {{#if updatedAt}}
+              <p><strong>Updated:</strong> {{formatDate updatedAt}}</p>
+            {{/if}}
           </div>
         </div>
         <div class="extra content">
